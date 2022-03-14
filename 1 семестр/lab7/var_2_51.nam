@@ -1,0 +1,11 @@
+/aa->a/a
+/bb->b/b
+/ab->b/a
+/ba->a/b
+/->\
+aa\->a\a
+bb\->b\b
+ab\->b\a
+ba\->a\b
+\->
+->/

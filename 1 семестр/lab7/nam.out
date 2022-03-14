@@ -1,0 +1,71 @@
+nam: var_2_51.nam of Fri Nov  5 00:25:11 2021
+
+   /aa       ->  a/a      
+   /bb       ->  b/b      
+   /ab       ->  b/a      
+   /ba       ->  a/b      
+   /         ->  \        
+   aa\       ->  a\a      
+   bb\       ->  b\b      
+   ab\       ->  b\a      
+   ba\       ->  a\b      
+   \         ->           
+             ->  /        
+
+aababbab
+--------------------------------------------------------------------------------
+[           ->  /         ]  "/aababbab"
+[ /aa       ->  a/a       ]  "a/ababbab"
+[ /ab       ->  b/a       ]  "ab/aabbab"
+[ /aa       ->  a/a       ]  "aba/abbab"
+[ /ab       ->  b/a       ]  "abab/abab"
+[ /ab       ->  b/a       ]  "ababb/aab"
+[ /aa       ->  a/a       ]  "ababba/ab"
+[ /ab       ->  b/a       ]  "ababbab/a"
+[ /         ->  \         ]  "ababbab\a"
+[ ab\       ->  b\a       ]  "ababbb\aa"
+[ bb\       ->  b\b       ]  "ababb\baa"
+[ bb\       ->  b\b       ]  "abab\bbaa"
+[ ab\       ->  b\a       ]  "abb\abbaa"
+[ bb\       ->  b\b       ]  "ab\babbaa"
+[ ab\       ->  b\a       ]  "b\ababbaa"
+[ \         ->            ]  "bababbaa"
+[           ->  /         ]  "/bababbaa"
+--------------------------------------------------------------------------------
+
+aaaaaab
+--------------------------------------------------------------------------------
+[           ->  /         ]  "/aaaaaab"
+[ /aa       ->  a/a       ]  "a/aaaaab"
+[ /aa       ->  a/a       ]  "aa/aaaab"
+[ /aa       ->  a/a       ]  "aaa/aaab"
+[ /aa       ->  a/a       ]  "aaaa/aab"
+[ /aa       ->  a/a       ]  "aaaaa/ab"
+[ /ab       ->  b/a       ]  "aaaaab/a"
+[ /         ->  \         ]  "aaaaab\a"
+[ ab\       ->  b\a       ]  "aaaab\aa"
+[ ab\       ->  b\a       ]  "aaab\aaa"
+[ ab\       ->  b\a       ]  "aab\aaaa"
+[ ab\       ->  b\a       ]  "ab\aaaaa"
+[ ab\       ->  b\a       ]  "b\aaaaaa"
+[ \         ->            ]  "baaaaaa"
+[           ->  /         ]  "/baaaaaa"
+--------------------------------------------------------------------------------
+
+bbaabab
+--------------------------------------------------------------------------------
+[           ->  /         ]  "/bbaabab"
+[ /bb       ->  b/b       ]  "b/baabab"
+[ /ba       ->  a/b       ]  "ba/babab"
+[ /ba       ->  a/b       ]  "baa/bbab"
+[ /bb       ->  b/b       ]  "baab/bab"
+[ /ba       ->  a/b       ]  "baaba/bb"
+[ /bb       ->  b/b       ]  "baabab/b"
+[ /         ->  \         ]  "baabab\b"
+[ ab\       ->  b\a       ]  "baabb\ab"
+[ bb\       ->  b\b       ]  "baab\bab"
+[ ab\       ->  b\a       ]  "bab\abab"
+[ ab\       ->  b\a       ]  "bb\aabab"
+[ bb\       ->  b\b       ]  "b\baabab"
+[ \         ->            ]  "bbaabab"
+[           ->  /         ]
