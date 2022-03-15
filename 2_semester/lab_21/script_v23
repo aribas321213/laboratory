@@ -1,0 +1,37 @@
+#! /bin/bash
+
+if [[ $1 == ? ]]
+    then echo "Use: ./script [suffix] [name] [size]"
+elif [[ $1 == '' ]]
+    then echo "No entered the suffix"
+else
+    if [[ $2 == '' ]]
+        then echo "No entered the name of file"
+    elif [[ $3 == '' ]]
+        then echo "No entered the size of file"
+    else
+        if [[ -f $2 ]]
+        then 
+            rm $2
+        fi
+        touch $2
+        for file in $(pwd)/*$1
+        do
+            if [ -x $file ]
+            then
+                name=$( echo $file | rev | cut -d'/' -f1 | rev) # name of file
+                size=$( stat --format="%s" $file) # size of file
+                size_w=$( stat --format="%s" $2) # size of writeble file
+                to_file=$( echo $name $size)
+                size_f=$(( ${#to_file} + 1 )) 
+                if [[ $(( $size_f + $size_w )) -gt $3 ]]
+                then
+                    echo "Not enough memory!"
+                    exit
+                fi
+                echo $name $size >> $2
+            fi
+        done
+        echo "DONE!"
+    fi
+fi
