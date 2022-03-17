@@ -1,0 +1,85 @@
+\documentclass[a5paper,10pt]{book}
+\usepackage[OT1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{soulutf8}
+
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=0.5cm,bindingoffset=0cm]{geometry}
+\usepackage{setspace}
+\linespread{0.6}
+\let\emph\textit
+\usepackage[symbol*]{footmisc}
+\usepackage{amsmath, amssymb}
+\usepackage{wasysym}
+
+\begin{document}
+    \markboth{\small{\qquad\textsc{ряды фурье\hspace{4cm} \small{[гл. XVII}}}}
+    {\small{\textsc{{\S \ 1]}\hspace{3cm}определение. постановка задачи}}}
+
+    \setcounter{page}{320}
+    \noindent если же $n = k$, то \\
+    $$
+        \begin{aligned}
+            &\int\limits_{-\pi}^\pi \cos{kx}^{2}\,dx = \pi,\\
+            & \int\limits_{-\pi}^\pi \sin{kx}\cos{kx}\,dx = 0,\\
+            & \int\limits_{-\pi}^\pi \sin{kx}^{2}\,dx = \pi. 
+        \end{aligned}
+        \eqno{(II)}
+    $$
+    \noindent Вычислим, например, первый интеграл из группы $(I)$. Так как\\
+    $$
+        \cos{nx}\cos{kx} = \frac{1}{2}[\cos{(n+k)x} + \cos{(n-k)x}]
+    $$
+    \noindent то\\
+    $$
+        \int\limits_{-\pi}^\pi\cos{nx}\cos{kx}\,dx = \frac{1}{2}\int\limits_{-\pi}^\pi\cos{(n+k)x}\,dx + \frac{1}{2}\int\limits_{-\pi}^\pi\cos{(n-k)x}\,dx
+    $$
+    \noindent Подобным образом можно получить и остальные формулы $(I)$\footnote[1]{
+        С помощью формул\\
+        $$ \cos{nx}\sin{kx} = \frac{1}{2}[\sin{(n+k)x} - \sin{(n-k)x}] $$
+        $$ \sin{nx}\sin{kx} = \frac{1}{2}[-\cos{(n+k)x} + \cos{(n-k)x}] $$
+    }).\\
+    \noindent Интегралы группы $(II)$ вычисляют непосредственно (см. X гл. т. I).\\ \indent
+    Теперь мы можем вычислить коэффициенты $a_k$ и $b_k$ ряда (2).\\
+    Для разыскания коэффициента $a_k$ при каком-либо определенном значении $k\ne0$ умножим обе части равенства (2) на $\cos{kx}$:
+    $$
+        f(x)\cos{kx} = \frac{a_0}{2}\cos{kx} + \sum_{n=1}^{\inf}(a_{n}\cos{nx}\cos{kx} + b_{n}\sin{nx}\cos{kx}).
+        \eqno{(2')}
+    $$
+    \noindent Ряд, получившийся в правой части равенства, мажорируем, так как его члены не превосходят по абсолютной величине членов сходящегося положительного ряда (3). Поэтому его можно почленно интегрировать на любом отрезке.\\
+    \indent Проинтегрируем равенство $(2')$ в пределах от $-\pi$ до $\pi$:\\
+    \noindent $\int\limits_{-\pi}^\pi f(x)\cos{kx}\,dx = \frac{a_0}{2}\int\limits_{-\pi}^\pi \cos{kx}\,dx +$\\
+    \begin{flushright}
+        $+ \sum_{n=1}^{\inf}\Big(a_n\int\limits_{-\pi}^\pi\cos{nx}\cos{kx}\,dx + b_n\int\limits_{-\pi}^\pi\sin{nx}\cos{kx}\,dx \Big).$
+    \end{flushright}
+    \newpage
+    \indent Принимая во внимание формулы $(II)$ и $(I)$, видим, что все интегралы в правой части равны нулю, кроме интеграла с коэффициентом $a_k$.\\
+    \indent Следовательно,
+    $$
+        \int\limits_{-\pi}^\pi f(x)\cos{kx}\,dx = a_k\int\limits_{-\pi}^\pi\cos^{2}{kx}\,dx = a_k\pi,
+    $$
+    откуда 
+    $$
+        a_k = \frac{1}{\pi}\int\limits_{-\pi}^\pi f(x)\cos{kx}\,dx.
+        \eqno{(5)}
+    $$\\
+    \indent Умножая обе части равенства $(2)$ на $\sin{kx}$ и снова интегрируя от $-\pi$ до $\pi$, найдем
+    $$
+        \int\limits_{-\pi}^\pi f(x)\sin{kx}\,dx = b_k\int\limits_{-\pi}^\pi\sin^{2}{kx}\,dx = b_k\pi,
+        \eqno{(6)}
+    $$
+    откуда 
+    $$
+        b_k = \frac{1}{\pi}\int\limits_{-\pi}^\pi f(x)\sin{kx}\,dx.
+        \eqno{(7)}
+    $$\\
+    \indent Коэффициенты, определенные по формулам $(4)-(6)$, называются \textit{коэффициентами Фурье} функции $f(x)$, а тригонометрический ряд $(1)$ с такими коэффициентами называется \textit{рядом Фурье} функции $f(x)$.\\
+    \indent Возвратимся теперь к вопросу, поставленному нами в начале параграфа: какими свойствами должна обладать функция, чтобы построенный для неё ряд Фурье сходился и чтобы сумма построенного ряда Фурье равнялась значениям данной функции в соответствующих точках?\\
+    \indent Мы сформулируем здесь теорему, которая даст достаточные условия представимости функции $f(x)$ рядом Фурье.\\
+    \indent \so{Определение}. Функция $f(x)$ называется \textit{кусочно монотонной} на отрезке $[a,b]$, если этот отрезок можно разбить конечным числом точек $x_1,\,x_2,\,\dots ,\, x_{n-1}$ на интервалы $ (a, x_1), (a, x_2), \, \dots ,\, (x_{n-1}, b) $ так что на каждом из интервалов функция монотонна, т. е. либо не возрастающая, либо неубывающая.\\
+    \indent Из определения следует, что если функция $f(x)$ кусочно монотонная и ограниченная на отрезке $[a,b]$, то она может иметь только точки разрыва первого рода. Действительно, если $x=c$ есть точка разрыва функции $f(x)$, то в силу монотонности функции существуют пределы
+    $$
+        \lim_{x\to{c-0}}f(x) = f(c-0), \lim_{x\to{c+0}}f(x) = f(c+0)
+    $$
+    т. е. точка $c$ есть точка разрыва первого рода (рис. 374).
+\end{document}
