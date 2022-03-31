@@ -1,0 +1,5 @@
+surname=Petrov initsial=PP initsial=yes is_medal=yes math=2 inf=5 fiz=5
+surname=Suvova initsial=SS initsial=yes is_medal=yes math=2 inf=4 fiz=4
+surname=Suvova initsial=SS initsial=yes is_medal=yes math=2 inf=4 fiz=4
+surname=Smirova initsial=SS initsial=yes is_medal=yes math=2 inf=2 fiz=4
+surname=Antonov initsial=AA initsial=yes is_medal=yes math=2 inf=5 fiz=2

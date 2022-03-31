@@ -1,0 +1,3 @@
+surname=Ivanov initsial=II initsial=yes is_medal=yes math=2 inf=3 fiz=3
+surname=Orlova initsial=OO initsial=yes is_medal=yes math=2 inf=4 fiz=4
+surname=Serova initsial=NN initsial=yes is_medal=yes math=2 inf=5 fiz=4

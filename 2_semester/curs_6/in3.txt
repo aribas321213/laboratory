@@ -1,0 +1,11 @@
+Kovrov	II	no	yes	2	3	3
+Petrov	PP	no	no	4	5	5
+Suvova	SS	no	no	2	4	4
+Antonov	NN	no	no	4	4	4
+Orlova	OO	yes	yes	2	4	4
+Babova	AA	no	no	3	3	5	
+Gromova	KK	yes	yes	4	4	5
+Gromova	KK	yes	no	5	4	5
+Smirova	AA	yes	no	3	5	5
+Ivanov	EE	yes	no	5	5	5
+Serova	SS	no	yes	4	5	5
