@@ -1,0 +1,97 @@
+\documentclass[10pt]{report}
+
+\usepackage{styles/log-style}
+\usepackage{setspace}
+
+\begin{document}
+    % header
+    \begin{spacing}{1.7}
+        \hspace{1.2in}
+        \textbf {Отчет по Курсовой работе} № 7\\     % указать номер лабораторной
+        \indent \hspace{1.2in} по курсу: \underline{1 фундаментальная информатика } \\
+        \indent \hspace{1.2in} студент группы : \underline{М8О-105Б-21 Титеев Рамиль Маратович }, № по списку: \underline{ 23 } \\
+        \indent \hspace{1.2in} Адреса www, e-mail, jabber, skype: \underline{ derol.gym@gmail.com } \\
+        \indent \hspace{1.2in} Работа выполнена: "17 апреля 2022г" \\   % указать дату
+        \indent \hspace{1.2in} Преподаватель: \underline{ каф. 806 В.К.Титов} \\
+        \indent \hspace{1.2in} Входной контроль знаний с оценкой: \tlinee{2in} \\
+        \indent \hspace{1.2in} Отчет сдан "\tlinee{0.2in}"\tlinee{1in}20\tlinee{0.2in}г., итоговая оценка \tlinee{1in}\\
+        \indent \hspace{1.2in} Подпись преподавателя \tlinee{1.2in}\\
+    \end{spacing}
+    
+    \begin{spacing}{1}
+        \indent \textbf{1. Тема}: \underline{Разреженные матрицы.}\\               % Ввести тему
+        \indent \textbf{2. Цель работы}: \underline{Составить программу на языке Си с процедурами и/или функциями для } \\
+        \indent \underline{обработки прямоугольных разреженных матриц с элементами целого, вещественного,} \\ 
+        \indent \underline{или комплексного типов.} \\       % Ввести цель работы      % Ввести цель работы
+        \indent \textbf{3. Задание}: \underline{Вариант схемы размещения матрицы: 3. Три вектора;}\\
+        \indent \underline{Вариант преобразований: Определить максимальный по модулю элемент матрицы и разделить}\\
+        \indent \underline{на него все элементы строки, в которой он находится. Если таких элементов несколько, обработать}\\
+        \indent \underline{каждую строку, содержащую такой элемент. }  \\           % Ввести задание
+        \indent \textbf{4. Оборудование}(\textit{лабораторное}):  \\ 
+        \indent ЭВМ \tlinee{0.5in}, процессор \tlinee{0.7in}, имя узла сети \tlinee{0.3in} с ОП \tlinee{0.2in} ГБ\\
+        \indent НМД \tlinee{0.5in} ГБ. Терминал \tlinee{0.7in} адрес \tlinee{0.7in}. Принтер \tlinee{0.7in}\\
+        \indent Другие устройства \tlinee{2.5in} \\
+        \indent \textit{Оборудование ПЭВМ студента, если использовалось}:  \\ 
+        \indent Процессор \underline{ Ryzen 4600 @ 6x 3.0 GHz }, ОП \underline{ 16384 } МБ, НМД \tlinee{0.5in}ГБ. Монитор \underline{ Встроенный }\\
+        \indent Другие устройства \tlinee{2.5in} \\
+
+        \indent \textbf{5. Программное обеспечение}(\textit{лабораторное}):  \\ 
+        \indent Операционная система семейства UNIX, наименование \underline{\hspace{0.5in}} версия \underline{\hspace{0.5in}}\\
+        \indent Интерпретатор  команд: \underline{\hspace{2in}} версия \tlinee{0.5in}\\
+        \indent Система программирования: \tlinee{2in} версия \tlinee{0.5in}\\
+        \indent Редактор текстов: \tlinee{2in} версия \tlinee{0.5in}\\
+        \indent Утилиты операционной системы: \tlinee{4in}\\
+        \indent Прикладные системы и программы: \tlinee{3.7in}\\
+        \indent Местонахождение и имена файлов и программ данных: \tlinee{2.2in}\\
+
+        \indent \textit{Программное обеспечение ЭВМ студента, если использовалось}:  \\ 
+        \indent Операционная система семейства UNIX, наименование \underline{ Ubuntu } версия \underline{ 20.04 }\\
+        \indent Интерпретатор  команд: \underline{ bash } версия \tlinee{0.5in}\\
+        \indent Система программирования: \underline{ C } версия \tlinee{0.5in}\\
+        \indent Редактор текстов: \underline{ Emacs } версия \tlinee{0.5in}\\
+        \indent Утилиты операционной системы: \tlinee{4in}\\
+        \indent Прикладные системы и программы: \tlinee{3.7in}\\
+        \indent Местонахождение и имена файлов и программ данных: \underline{ /usr/bin , a также /bin }\\
+
+    \end{spacing}
+    \newpage
+    \begin{spacing}{1}
+        \indent \textbf{6. Идея, метод, алгоритм} решения задачи (в формах: словесной, псевдокода, графической [блок-схема, диаграмма, рисунок, таблица] или формальное описание с пред- и постусловиями)\\
+        \input{formal/algoritm.tex}
+    
+        \indent \textbf{7. Сценарий выполнения работы} [план работы, первоначальный текст программы в черновике (можно на отдельном листе) и тесты, либо соображения по тестированию].\\
+        \input{formal/punkt7.tex}
+        \textit{Пункты 1-7 отчѐта составляются \textbf{строго до} начала лабораторной работы.}\\
+        \begin{flushright}
+            Допущен к выполнению работы. Подпись преподавателя \underline{\hspace{1.5in}}\\
+        \end{flushright}
+    
+        \indent \textbf{8. Распечатка протокола} (подклеить листинг окончательного варианта программы с текстовыми
+        примерами, подписанный преподавателем).\\
+        \verbatiminput{formal/log.txt}
+    
+        \indent \textbf{9. Дневник отладки} должен содержать дату и время сеансов отладки, и основные ошибки (ошибки в
+        сценарии и программе, не стандартные операции) и краткие комментарии к ним. В дневнике отладки
+        приводятся сведения об использовании других ЭВМ, существенном участии преподавателя и других
+        лиц в написании и отладке программы.\\
+        \input{formal/punkt9.tex}
+        
+        \indent \textbf{10.} Замечание автора по существу работы \underline{\hspace{3.5in}}\\
+        \underline{\hspace{5.5in}}
+        
+        \indent \textbf{11.} Выводы \underline{\hspace{0.5in}Я научился работать с разреженными матрицами.\hspace{0.5in}}\\
+
+
+        Недочеты, допущенные при выполнении задания, могут быть устранены следующим образом \underline{\hspace{0.5in}}\\
+        \underline{\hspace{5.5in}}
+
+        \begin{flushright}
+            Подпись студента \underline{\hspace{1.5in}}\\
+        \end{flushright}
+
+    \end{spacing}
+    
+   
+    
+    
+\end{document}
