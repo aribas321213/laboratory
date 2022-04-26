@@ -1,0 +1,89 @@
+constantfear@constantfear:~/projects/laboratory/2_semester/curs_8$ cat header.txt 
+*****************************************************************
+*                      Курсовая работа №8                       *
+*                       Линейныйе списки.                       *
+*                Выполнил студент гр. М8О-105-Б                 *
+*                    Титеев Рамиль Маратович                    *
+*****************************************************************
+constantfear@constantfear:~/projects/laboratory/2_semester/curs_8$ g++ curs_8.cpp 
+constantfear@constantfear:~/projects/laboratory/2_semester/curs_8$ ./a.out 
+
+Input from 1 to 10 or 0 for actions:
+1. Generation list.
+2. Addition new items in end of list.
+3. Addition new items in begin of list.
+4. Deleting from list.
+5. Print list.
+6. Inserting in list.
+7. Erase list.
+8. Lenght of list.
+9. Print this MENU
+10. Main Action
+0. Exit out program.
+
+Input number of MENU: 1
+
+Input number of new items of list: n=10
+
+Input number of MENU: 5
+
+List:
+[ Jan Jul Jun Nov Aug Jan Sep Dec Nov Dec ]
+
+Input number of MENU: 9
+
+Input from 1 to 10 or 0 for actions:
+1. Generation list.
+2. Addition new items in end of list.
+3. Addition new items in begin of list.
+4. Deleting from list.
+5. Print list.
+6. Inserting in list.
+7. Erase list.
+8. Lenght of list.
+9. Print this MENU
+10. Main Action
+0. Exit out program.
+
+Input number of MENU: 2
+
+Input value of adding item: m = Jun
+
+Input number of MENU: 5
+
+List:
+[ Jan Jul Jun Nov Aug Jan Sep Dec Nov Dec Jun ]
+
+Input number of MENU: 8
+
+Lenght of list = 11
+
+Input number of MENU: 9
+
+Input from 1 to 10 or 0 for actions:
+1. Generation list.
+2. Addition new items in end of list.
+3. Addition new items in begin of list.
+4. Deleting from list.
+5. Print list.
+6. Inserting in list.
+7. Erase list.
+8. Lenght of list.
+9. Print this MENU
+10. Main Action
+0. Exit out program.
+
+Input number of MENU: 10
+
+Input value for main action: k=4
+
+Input number of MENU: 5
+
+List:
+[ Jan Jul Jun Nov Aug Jan Sep ]
+
+Input number of MENU: 10
+
+Input value for main action: k=10
+Can`t do this!!!
+Input number of MENU: 0
