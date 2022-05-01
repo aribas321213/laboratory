@@ -1,0 +1,280 @@
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_23$ cat header.txt 
+*****************************************************************
+*                     Лабораторная работа №23                   *
+*                  Динамические структуры данных.               *
+*                      Обработка деревьев.                      *
+*                Выполнил студент гр. М8О-105-Б                 *
+*                    Титеев Рамиль Маратович                    *
+*****************************************************************
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_23$ g++ lab_23.cpp 
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_23$ ./a.out 
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+1
+
+Input number of items: ==> 40
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+2
+                \__50
+            \__49
+        \__48
+            \__46
+    \__42
+                \__41
+            \__38
+                        \__37
+                    \__36
+                \__34
+                    \__33
+        \__32
+                    \__31
+                \__30
+                        \__27
+                    \__26
+            \__23
+                        \__22
+                    \__20
+                        \__18
+                \__17
+                                    \__15
+                                \__13
+                            \__12
+                        \__10
+                    \__7
+                            \__5
+                                \__4
+                        \__2
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+3
+For insert Input v = 1
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+2
+                \__50
+            \__49
+        \__48
+            \__46
+    \__42
+                \__41
+            \__38
+                        \__37
+                    \__36
+                \__34
+                    \__33
+        \__32
+                    \__31
+                \__30
+                        \__27
+                    \__26
+            \__23
+                        \__22
+                    \__20
+                        \__18
+                \__17
+                                    \__15
+                                \__13
+                            \__12
+                        \__10
+                    \__7
+                            \__5
+                                \__4
+                        \__2
+                            \__1
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+4
+For delete Input v = 15
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+2
+                \__50
+            \__49
+        \__48
+            \__46
+    \__42
+                \__41
+            \__38
+                        \__37
+                    \__36
+                \__34
+                    \__33
+        \__32
+                    \__31
+                \__30
+                        \__27
+                    \__26
+            \__23
+                        \__22
+                    \__20
+                        \__18
+                \__17
+                                \__13
+                            \__12
+                        \__10
+                    \__7
+                            \__5
+                                \__4
+                        \__2
+                            \__1
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+5
+
+Number of nodes = 29
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+6
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+2
+
+Tree is empty.
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+1
+
+Input number of items: ==> 40
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+2
+                \__50
+            \__49
+                \__48
+                            \__46
+                        \__45
+                    \__44
+        \__42
+                \__36
+            \__35
+    \__29
+            \__26
+                    \__25
+                \__24
+                    \__23
+        \__21
+                \__19
+            \__18
+                        \__17
+                            \__16
+                    \__15
+                \__14
+                        \__11
+                    \__10
+                        \__8
+                                        \__7
+                                    \__6
+                                \__5
+                            \__1
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+7
+Number of nodes with two subtrees: 4
+
+    MENU
+ 0 - exit
+ 1 - add random tree
+ 2 - print tree
+ 3 - insert item
+ 4 - delete item
+ 5 - number of nodes
+ 6 - clear tree
+ 7 - action
+0
