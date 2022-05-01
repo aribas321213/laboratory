@@ -1,0 +1,81 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}stdlib.h\PYGZgt{}}
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}string.h\PYGZgt{}}
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}errno.h\PYGZgt{}}
+    \PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}student.h\PYGZdq{}}
+
+    \PYG{k+kt}{void} \PYG{n+nf}{usage}\PYG{p}{()\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Usage: programm [\PYGZhy{}key] input\PYGZus{}filename output\PYGZus{}filename}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Keys: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZhy{}f output all data }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZhy{}t complete the task }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{argc}\PYG{p}{,} \PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{argv}\PYG{p}{[])\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{argc} \PYG{o}{!=} \PYG{l+m+mi}{4}\PYG{p}{)\PYGZob{}}
+            \PYG{n}{usage}\PYG{p}{();}
+            \PYG{k}{return} \PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{student} \PYG{n}{s}\PYG{p}{;}
+        \PYG{k+kt}{FILE} \PYG{o}{*}\PYG{n}{fi} \PYG{o}{=} \PYG{p}{(}\PYG{n}{fi}\PYG{o}{=}\PYG{n}{fopen}\PYG{p}{(}\PYG{n}{argv}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{],}\PYG{l+s}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{));}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{fi}\PYG{p}{)\PYGZob{}}
+            \PYG{n}{perror}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Can`t open input file\PYGZdq{}}\PYG{p}{);}
+            \PYG{k}{return} \PYG{l+m+mi}{2}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k+kt}{FILE} \PYG{o}{*}\PYG{n}{fo} \PYG{o}{=} \PYG{p}{(}\PYG{n}{fo}\PYG{o}{=}\PYG{n}{fopen}\PYG{p}{(}\PYG{n}{argv}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{],}\PYG{l+s}{\PYGZdq{}wb\PYGZdq{}}\PYG{p}{));}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{fo}\PYG{p}{)\PYGZob{}}
+            \PYG{n}{perror}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Can`t open output file\PYGZdq{}}\PYG{p}{);}
+            \PYG{k}{return} \PYG{l+m+mi}{2}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{strcmp}\PYG{p}{(}\PYG{n}{argv}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{l+s}{\PYGZdq{}\PYGZhy{}f\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}====================================================\PYGZbs{}}
+\PYG{l+s}{    =============}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}|  Surname and initials  |Is entrant|Is medal| Math\PYGZbs{}}
+\PYG{l+s}{    | Inf | Fiz |}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}====================================================\PYGZbs{}}
+\PYG{l+s}{    =============}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+            \PYG{k}{while}\PYG{p}{(}\PYG{o}{!}\PYG{n}{feof}\PYG{p}{(}\PYG{n}{fi}\PYG{p}{))\PYGZob{}}
+                \PYG{n}{fread}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{s}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{s}\PYG{p}{),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{fi}\PYG{p}{);}
+                \PYG{n}{fprintf}\PYG{p}{(}\PYG{n}{fo}\PYG{p}{,}\PYG{l+s}{\PYGZdq{}surname=\PYGZpc{}s initsial=\PYGZpc{}s initsial=\PYGZpc{}s is\PYGZus{}medal=\PYGZpc{}s\PYGZbs{}}
+\PYG{l+s}{     math=\PYGZpc{}d inf=\PYGZpc{}d fiz=\PYGZpc{}d}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{surname}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{initsial}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{is\PYGZus{}entrant}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{is\PYGZus{}medal}\PYG{p}{,}
+                                                    \PYG{n}{s}\PYG{p}{.}\PYG{n}{math}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{inf}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{fiz}\PYG{p}{);}
+                \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}|      \PYGZpc{}\PYGZhy{}10s \PYGZpc{}2s     |   \PYGZpc{}3s    |  \PYGZpc{}3s   |  \PYGZpc{}1d   |\PYGZbs{}}
+\PYG{l+s}{      \PYGZpc{}1d  |  \PYGZpc{}1d  |}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{surname}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{initsial}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{is\PYGZus{}entrant}\PYG{p}{,}
+                                        \PYG{n}{s}\PYG{p}{.}\PYG{n}{is\PYGZus{}medal}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{math}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{inf}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{fiz}\PYG{p}{);}
+                \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZbs{}}
+\PYG{l+s}{    \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{else}\PYG{p}{\PYGZob{}}
+            \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{strcmp}\PYG{p}{(}\PYG{n}{argv}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{l+s}{\PYGZdq{}\PYGZhy{}t\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+                \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}=================================================\PYGZbs{}}
+\PYG{l+s}{        ================}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+                \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}|  Surname and initials  |Is entrant|Is medal| Math |\PYGZbs{}}
+\PYG{l+s}{         Inf | Fiz |}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+                \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}=================================================\PYGZbs{}}
+\PYG{l+s}{        ================}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+                \PYG{k}{while}\PYG{p}{(}\PYG{o}{!}\PYG{n}{feof}\PYG{p}{(}\PYG{n}{fi}\PYG{p}{))\PYGZob{}}
+                    \PYG{n}{fread}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{s}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{s}\PYG{p}{),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{fi}\PYG{p}{);}
+                    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{strcmp}\PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n}{is\PYGZus{}entrant}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}yes\PYGZdq{}}\PYG{p}{)}
+                        \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{n}{strcmp}\PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n}{is\PYGZus{}medal}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}yes\PYGZdq{}}\PYG{p}{)}
+                        \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n}{math} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{3}\PYG{p}{))\PYGZob{}}
+                        \PYG{n}{fprintf}\PYG{p}{(}\PYG{n}{fo}\PYG{p}{,}\PYG{l+s}{\PYGZdq{}surname=\PYGZpc{}s initsial=\PYGZpc{}s initsial=\PYGZpc{}s\PYGZbs{}}
+\PYG{l+s}{                                is\PYGZus{}medal=\PYGZpc{}s math=\PYGZpc{}d inf=\PYGZpc{}d fiz=\PYGZpc{}d}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,}
+                                \PYG{n}{s}\PYG{p}{.}\PYG{n}{surname}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{initsial}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{is\PYGZus{}entrant}\PYG{p}{,}
+                                \PYG{n}{s}\PYG{p}{.}\PYG{n}{is\PYGZus{}medal}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{math}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{inf}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{fiz}\PYG{p}{);}
+                        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}|      \PYGZpc{}\PYGZhy{}10s \PYGZpc{}2s     |   \PYGZpc{}3s    |  \PYGZpc{}3s   |\PYGZbs{}}
+\PYG{l+s}{          \PYGZpc{}1d   |  \PYGZpc{}1d  |  \PYGZpc{}1d  |}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{surname}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{initsial}\PYG{p}{,}
+          \PYG{n}{s}\PYG{p}{.}\PYG{n}{is\PYGZus{}entrant}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{is\PYGZus{}medal}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{math}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{inf}\PYG{p}{,} \PYG{n}{s}\PYG{p}{.}\PYG{n}{fiz}\PYG{p}{);}
+                        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZbs{}}
+\PYG{l+s}{        \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+                    \PYG{p}{\PYGZcb{}}
+                \PYG{p}{\PYGZcb{}}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{k}{else}\PYG{p}{\PYGZob{}}
+                \PYG{n}{perror}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Invalid key\PYGZdq{}}\PYG{p}{);}
+                \PYG{k}{return} \PYG{l+m+mi}{1}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+\end{Verbatim}
