@@ -1,0 +1,250 @@
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_24$ cat header.txt 
+*****************************************************************
+*                     Лабораторная работа №24                   *
+*                  Алгоритмы и структуры данных.                *
+*                Выполнил студент гр. М8О-105-Б                 *
+*                    Титеев Рамиль Маратович                    *
+*****************************************************************
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_24$ g++ lab_24.cpp 
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_24$ ./a.out 
+------------------------------------
+Input expression:
+
+2+2^2-1*4+3^2/3
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 1
+------------------------------------
+            \__3
+        \__/
+                \__2
+            \__^
+                \__3
+    \__+
+                \__4
+            \__*
+                \__1
+        \__-
+                    \__2
+                \__^
+                    \__2
+            \__+
+                \__2
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 2
+------------------------------------
+(((2+2^2)-1*4)+3^2/3)
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 3
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 2
+------------------------------------
+5
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 1
+------------------------------------
+    \__5
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 0
+------------------------------------
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_24$ ./a.out 
+------------------------------------
+Input expression:
+
+3+2+4^2-3*4
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 1
+------------------------------------
+            \__4
+        \__*
+            \__3
+    \__-
+                \__2
+            \__^
+                \__4
+        \__+
+                \__2
+            \__+
+                \__3
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 2
+------------------------------------
+(((3+2)+4^2)-3*4)
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 3
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 2
+------------------------------------
+((5+4^2)-3*4)
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 1
+------------------------------------
+            \__4
+        \__*
+            \__3
+    \__-
+                \__2
+            \__^
+                \__4
+        \__+
+            \__5
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 0
+------------------------------------
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_24$ ./a.out 
+------------------------------------
+Input expression:
+
+3*3-4+2*(4-1)^2-8/2^2
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 1
+------------------------------------
+                \__2
+            \__^
+                \__2
+        \__/
+            \__8
+    \__-
+                    \__2
+                \__^
+                        \__1
+                    \__-
+                        \__4
+            \__*
+                \__2
+        \__+
+                \__4
+            \__-
+                    \__3
+                \__*
+                    \__3
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 2
+------------------------------------
+(((3*3-4)+2*(4-1)^2)-8/2^2)
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 3
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 2
+------------------------------------
+((5+2*9)-2)
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 1
+------------------------------------
+        \__2
+    \__-
+                \__9
+            \__*
+                \__2
+        \__+
+            \__5
+------------------------------------
+
+    MENU
+ 0 - exit
+ 1 - print tree
+ 2 - tree to expression
+ 3 - transform tree
+===> 0
+------------------------------------
