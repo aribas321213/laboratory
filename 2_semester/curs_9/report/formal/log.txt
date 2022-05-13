@@ -1,0 +1,184 @@
+constantfear@constantfear:~/projects/laboratory/2_semester/curs_9$ cat header.txt 
+*****************************************************************
+*                      Курсовая работа №9                       *
+*                      Сортировка и поиск.                      *
+*                Выполнил студент гр. М8О-105-Б                 *
+*                    Титеев Рамиль Маратович                    *
+*****************************************************************
+constantfear@constantfear:~/projects/laboratory/2_semester/curs_9$ cat in1
+1
+2
+3
+4
+5
+6
+7
+8
+constantfear@constantfear:~/projects/laboratory/2_semester/curs_9$ cat in2
+Morbi mattis massa ac elit pulvinar dictum.
+In in justo id diam pellentesque congue.
+Donec vitae tellus non erat egestas scelerisque.
+Quisque quis est et leo sollicitudin dapibus.
+Nam rutrum diam sed tincidunt auctor.
+Duis lobortis lacus nec euismod mattis.
+Donec ut elit cursus, ornare nisi a, mollis mi.
+Aliquam blandit nulla quis ultrices volutpat.
+constantfear@constantfear:~/projects/laboratory/2_semester/curs_9$ g++ curs_9.cpp
+constantfear@constantfear:~/projects/laboratory/2_semester/curs_9$ ./a.out 
+-----------------------------------------------------------
+| Key |                       Data                        |
+-----------------------------------------------------------
+|  1  | Morbi mattis massa ac elit pulvinar dictum.
+-----------------------------------------------------------
+|  2  | In in justo id diam pellentesque congue.
+-----------------------------------------------------------
+|  3  | Donec vitae tellus non erat egestas scelerisque.
+-----------------------------------------------------------
+|  4  | Quisque quis est et leo sollicitudin dapibus.
+-----------------------------------------------------------
+|  5  | Nam rutrum diam sed tincidunt auctor.
+-----------------------------------------------------------
+|  6  | Duis lobortis lacus nec euismod mattis.
+-----------------------------------------------------------
+|  7  | Donec ut elit cursus, ornare nisi a, mollis mi.
+-----------------------------------------------------------
+|  8  | Aliquam blandit nulla quis ultrices volutpat.
+-----------------------------------------------------------
+
+Menu
+1) Print table
+2) Binary search
+3) Sort table
+4) Mix table
+5) Reverse table
+6) Exit
+Choose an action ===> 4
+Menu
+1) Print table
+2) Binary search
+3) Sort table
+4) Mix table
+5) Reverse table
+6) Exit
+Choose an action ===> 1
+-----------------------------------------------------------
+| Key |                       Data                        |
+-----------------------------------------------------------
+|  1  | Morbi mattis massa ac elit pulvinar dictum.
+-----------------------------------------------------------
+|  3  | Donec vitae tellus non erat egestas scelerisque.
+-----------------------------------------------------------
+|  4  | Quisque quis est et leo sollicitudin dapibus.
+-----------------------------------------------------------
+|  7  | Donec ut elit cursus, ornare nisi a, mollis mi.
+-----------------------------------------------------------
+|  5  | Nam rutrum diam sed tincidunt auctor.
+-----------------------------------------------------------
+|  6  | Duis lobortis lacus nec euismod mattis.
+-----------------------------------------------------------
+|  8  | Aliquam blandit nulla quis ultrices volutpat.
+-----------------------------------------------------------
+|  2  | In in justo id diam pellentesque congue.
+-----------------------------------------------------------
+
+Menu
+1) Print table
+2) Binary search
+3) Sort table
+4) Mix table
+5) Reverse table
+6) Exit
+Choose an action ===> 2
+Table is not sorted!
+Menu
+1) Print table
+2) Binary search
+3) Sort table
+4) Mix table
+5) Reverse table
+6) Exit
+Choose an action ===> 5
+Menu
+1) Print table
+2) Binary search
+3) Sort table
+4) Mix table
+5) Reverse table
+6) Exit
+Choose an action ===> 1
+-----------------------------------------------------------
+| Key |                       Data                        |
+-----------------------------------------------------------
+|  2  | In in justo id diam pellentesque congue.
+-----------------------------------------------------------
+|  8  | Aliquam blandit nulla quis ultrices volutpat.
+-----------------------------------------------------------
+|  6  | Duis lobortis lacus nec euismod mattis.
+-----------------------------------------------------------
+|  5  | Nam rutrum diam sed tincidunt auctor.
+-----------------------------------------------------------
+|  7  | Donec ut elit cursus, ornare nisi a, mollis mi.
+-----------------------------------------------------------
+|  4  | Quisque quis est et leo sollicitudin dapibus.
+-----------------------------------------------------------
+|  3  | Donec vitae tellus non erat egestas scelerisque.
+-----------------------------------------------------------
+|  1  | Morbi mattis massa ac elit pulvinar dictum.
+-----------------------------------------------------------
+
+Menu
+1) Print table
+2) Binary search
+3) Sort table
+4) Mix table
+5) Reverse table
+6) Exit
+Choose an action ===> 3
+Menu
+1) Print table
+2) Binary search
+3) Sort table
+4) Mix table
+5) Reverse table
+6) Exit
+Choose an action ===> 1
+-----------------------------------------------------------
+| Key |                       Data                        |
+-----------------------------------------------------------
+|  1  | Morbi mattis massa ac elit pulvinar dictum.
+-----------------------------------------------------------
+|  2  | In in justo id diam pellentesque congue.
+-----------------------------------------------------------
+|  3  | Donec vitae tellus non erat egestas scelerisque.
+-----------------------------------------------------------
+|  4  | Quisque quis est et leo sollicitudin dapibus.
+-----------------------------------------------------------
+|  5  | Nam rutrum diam sed tincidunt auctor.
+-----------------------------------------------------------
+|  6  | Duis lobortis lacus nec euismod mattis.
+-----------------------------------------------------------
+|  7  | Donec ut elit cursus, ornare nisi a, mollis mi.
+-----------------------------------------------------------
+|  8  | Aliquam blandit nulla quis ultrices volutpat.
+-----------------------------------------------------------
+
+Menu
+1) Print table
+2) Binary search
+3) Sort table
+4) Mix table
+5) Reverse table
+6) Exit
+Choose an action ===> 2
+Enter the key: 6
+
+Found the string:
+ Duis lobortis lacus nec euismod mattis.
+Menu
+1) Print table
+2) Binary search
+3) Sort table
+4) Mix table
+5) Reverse table
+6) Exit
+Choose an action ===> 6
