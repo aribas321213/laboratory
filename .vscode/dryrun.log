@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/constantfear/projects/laboratory'
+make: Leaving directory '/home/constantfear/projects/laboratory'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

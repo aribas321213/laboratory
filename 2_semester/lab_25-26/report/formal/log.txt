@@ -1,0 +1,700 @@
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_25-26$ cat header.txt 
+*****************************************************************
+*                   Лабораторная работа №25-26                  *
+*              Абстрактные типы данных. Рекурсия.               *
+*            Модульное программирование на языке Си.            *
+*                Выполнил студент гр. М8О-105-Б                 *
+*                    Титеев Рамиль Маратович                    *
+*****************************************************************
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_25-26$ cat lab_25-26.cpp 
+#include <stdio.h>
+#include <stdlib.h>
+#include <random>
+#include "stack1.h"
+
+void Sort(Stack &S){
+    for(int i = Size(S); i>0; i--){
+        int q = Del_max(S, i);
+        Stack tmp;
+        Init(tmp);
+        while (!Empty(S)){
+            Push(tmp, Pop(S));
+        }
+        Push(S, q);
+        while (!Empty(tmp)){
+            Push(S, Pop(tmp));
+        }
+    }
+}
+
+int main()
+{
+    srand(time(0));
+    Stack S;
+    Init(S); Tvalue v; int k;
+    while(1){
+        printf("-----------Menu----------\n");
+        printf("| 1) Make random stack  |\n");
+        printf("|    2) Print stack     |\n");
+        printf("|     3) Push value     |\n");
+        printf("|     4) Pop value      |\n");
+        printf("|   5) Read top value   |\n");
+        printf("|   6) Size of stack    |\n");
+        printf("|  7) Sorting of stack  |\n");
+        printf("|     8) Print Menu     |\n");
+        printf("|        9) Exit        |\n");
+        printf("-------------------------\n");
+        printf("Choose an action ===> ");
+        scanf("%d", &k);
+        switch (k){
+            case 1:{
+                int s; 
+                printf("\nType length of stack (<100): "); 
+                scanf("%d",&s);
+                printf("\n"); 
+                while(s--){
+                    Push(S,rand()%100);
+                }
+                break;
+            }
+            case 2:{
+                printf("\n");
+                Display(S);
+                printf("\n");
+                break;
+            }
+            case 3:{
+                Tvalue s; 
+                printf("\n");
+                printf("Type value: "); 
+                scanf("%d",&s);
+                printf("\n");
+                Push(S,s);
+                break;
+            }
+            case 4:{
+                Tvalue q = Pop(S);
+                printf("\n%d was popped!\n\n", q);
+                break;
+            }
+            case 5:{
+                printf("\nTop value = %d\n\n", Top(S));
+                break;
+            }
+            case 6:{
+                printf("\nSize of stack = %d\n\n", Size(S));
+                break;
+            }
+            case 7:{
+                Sort(S);
+                break;
+            }
+            case 8:{
+                break;
+            }
+            case 9: return 0;
+        }
+    }
+    return 0;
+}
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_25-26$ cat Makefile 
+stack_on_mass.exe: stack_on_mass.o
+        g++ -c -o stack.o lab_25-26.cpp
+        g++ -o stack.exe stack.o
+stack_on_mass.o: stack1.h
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_25-26$ make
+g++ -c -o stack.o lab_25-26.cpp
+g++ -o stack.exe stack.o
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_25-26$ ./stack.exe 
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 1
+
+Type length of stack (<100): 10
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 75 74 92 49 81 17 60 84 62 98 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 5
+
+Top value = 98
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 4
+
+98 was popped!
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 75 74 92 49 81 17 60 84 62 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 6
+
+Size of stack = 9
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 3
+
+Type value: 27
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 75 74 92 49 81 17 60 84 62 27 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 7
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 92 84 81 75 74 62 60 49 27 17 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 3
+
+Type value: 70
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 3
+
+Type value: 54
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 92 84 81 75 74 62 60 49 27 17 70 54 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 6
+
+Size of stack = 12
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 7
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 92 84 81 75 74 70 62 60 54 49 27 17 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 9
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_25-26$ cat lab_25-26.cpp 
+#include <stdio.h>
+#include <stdlib.h>
+#include <random>
+#include "stack2.h"
+
+void Sort(Stack &S){
+    for(int i = Size(S); i>0; i--){
+        int q = Del_max(S, i);
+        Stack tmp;
+        Init(tmp);
+        while (!Empty(S)){
+            Push(tmp, Pop(S));
+        }
+        Push(S, q);
+        while (!Empty(tmp)){
+            Push(S, Pop(tmp));
+        }
+    }
+}
+
+int main()
+{
+    srand(time(0));
+    Stack S;
+    Init(S); Tvalue v; int k;
+    while(1){
+        printf("-----------Menu----------\n");
+        printf("| 1) Make random stack  |\n");
+        printf("|    2) Print stack     |\n");
+        printf("|     3) Push value     |\n");
+        printf("|     4) Pop value      |\n");
+        printf("|   5) Read top value   |\n");
+        printf("|   6) Size of stack    |\n");
+        printf("|  7) Sorting of stack  |\n");
+        printf("|     8) Print Menu     |\n");
+        printf("|        9) Exit        |\n");
+        printf("-------------------------\n");
+        printf("Choose an action ===> ");
+        scanf("%d", &k);
+        switch (k){
+            case 1:{
+                int s; 
+                printf("\nType length of stack (<100): "); 
+                scanf("%d",&s);
+                printf("\n"); 
+                while(s--){
+                    Push(S,rand()%100);
+                }
+                break;
+            }
+            case 2:{
+                printf("\n");
+                Display(S);
+                printf("\n");
+                break;
+            }
+            case 3:{
+                Tvalue s; 
+                printf("\n");
+                printf("Type value: "); 
+                scanf("%d",&s);
+                printf("\n");
+                Push(S,s);
+                break;
+            }
+            case 4:{
+                Tvalue q = Pop(S);
+                printf("\n%d was popped!\n\n", q);
+                break;
+            }
+            case 5:{
+                printf("\nTop value = %d\n\n", Top(S));
+                break;
+            }
+            case 6:{
+                printf("\nSize of stack = %d\n\n", Size(S));
+                break;
+            }
+            case 7:{
+                Sort(S);
+                break;
+            }
+            case 8:{
+                break;
+            }
+            case 9: return 0;
+        }
+    }
+    return 0;
+}
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_25-26$ cat Makefile 
+stack_on_list.exe: stack_on_list.o
+        g++ -c -o stack.o lab_25-26.cpp
+        g++ -o stack.exe stack.o
+stack_on_list.o: stack2.h
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_25-26$ make
+g++ -c -o stack.o lab_25-26.cpp
+g++ -o stack.exe stack.o
+constantfear@constantfear:~/projects/laboratory/2_semester/lab_25-26$ ./stack.exe 
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 1
+
+Type length of stack (<100): 10
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 12 57 47 47 7 19 40 58 61 43 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 5
+
+Top value = 12
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 4
+
+12 was popped!
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 57 47 47 7 19 40 58 61 43 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 7
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 7 19 40 43 47 47 57 58 61 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 3
+
+Type value: 51
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 51 7 19 40 43 47 47 57 58 61 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 3
+
+Type value: 34
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 34 51 7 19 40 43 47 47 57 58 61 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 7
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 7 19 34 40 43 47 47 51 57 58 61 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 6
+
+Size of stack = 11
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 2
+
+[ 7 19 34 40 43 47 47 51 57 58 61 ]
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 4
+
+7 was popped!
+
+-----------Menu----------
+| 1) Make random stack  |
+|    2) Print stack     |
+|     3) Push value     |
+|     4) Pop value      |
+|   5) Read top value   |
+|   6) Size of stack    |
+|  7) Sorting of stack  |
+|     8) Print Menu     |
+|        9) Exit        |
+-------------------------
+Choose an action ===> 9
