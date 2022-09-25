@@ -42,3 +42,9 @@
 - [Курсовая работа #7](2_semester/curs_7/КР_7_Титеев.pdf)
 - [Курсовая работа #8](2_semester/curs_8/КР_8_Титеев.pdf)
 - [Курсовая работа #9](2_semester/curs_9/КР_9_Титеев.pdf)
+
+## 3 семестр
+### Лабораторные работы
+- [Лабораторная работа #0](3_semester/lab_0/report/report.pdf)
+- [Лабораторная работа #1](3_semester/lab_1/report/report.pdf)
+- [Лабораторная работа #2](3_semester/lab_2_2/report/report.pdf)
