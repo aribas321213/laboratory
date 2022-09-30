@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.9.23)  25 SEP 2022 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.9.23)  30 SEP 2022 21:08
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1779,14 +1779,14 @@ File: formal/screen_1.png Graphic file (type png)
 Package pdftex.def Info: formal/screen_1.png  used on input line 48.
 (pdftex.def)             Requested size: 445.96503pt x 210.78697pt.
 [5 <./formal/screen_1.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 59.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 59.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
  ) 
 Here is how much of TeX's memory you used:
  33517 strings out of 482657
@@ -1808,9 +1808,9 @@ exmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1095.600pk> </home/constantfear/.texlive
 2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2074.600pk> </home/constantfear/.t
 exlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-Output written on report.pdf (6 pages, 161766 bytes).
+Output written on report.pdf (6 pages, 165132 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
+ 573 PDF objects out of 1000 (max. 8388607)
  275 compressed objects within 3 object streams
  176 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
