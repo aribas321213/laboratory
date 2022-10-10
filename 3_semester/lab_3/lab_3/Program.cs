@@ -1,0 +1,105 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace lab_3
+{
+    public class A {
+        public A(){
+            Console.WriteLine("constructor A "); 
+            this.count = 0;
+        }
+        protected int count { set; get; }
+        public virtual int fm() { 
+            return this.count + 1;
+        }
+    }
+    public class B : A {
+        public B(){
+            Console.WriteLine("constructor B "); 
+            this.count = 1;
+        }
+        public override int fm() { 
+            return this.count * 2;
+        }
+    }
+    public class D : B {
+        public D(){
+            Console.WriteLine("constructor D "); 
+            this.count = 2;
+        }
+        public override int fm() { 
+            return this.count + 2;
+        }
+    }
+
+    public class C : A {
+        public C(){
+            Console.WriteLine("constructor C "); 
+            this.count = 1;
+            this.mult = 10;
+        }
+        protected int mult { set; get; }
+        public override int fm() { 
+            return this.count * this.mult;
+        }
+    }
+    public class E : C {
+        public E(){
+            Console.WriteLine("constructor E "); 
+            this.count = 1;
+            this.mult = 2;
+        }
+        public override int fm() { 
+            return this.count + 3*this.mult;
+        }
+    }
+    public class J : C {
+        public J(){
+            Console.WriteLine("constructor J "); 
+            this.count = 1;
+            this.mult = 5;
+        }
+        public override int fm() { 
+            return this.count * 3 + this.mult;
+        }
+    }
+    public class K : J {
+        public K(){
+            Console.WriteLine("constructor K "); 
+            this.count = 1;
+            this.mult = 2;
+        }
+        public override int fm() { 
+            return this.count + this.mult;
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            A a = new A();
+            Console.WriteLine($"a.fm()  = {a.fm()}");
+            a = new B();
+            Console.WriteLine($"a.fm()  = {a.fm()}");
+            a = new C();
+            Console.WriteLine($"a.fm()  = {a.fm()}");
+            a = new D();
+            Console.WriteLine($"a.fm()  = {a.fm()}");
+            a = new E();
+            Console.WriteLine($"a.fm()  = {a.fm()}");
+            if (a is E ){
+                Console.WriteLine(" a is E");
+            }
+            a = new J();
+            Console.WriteLine($"a.fm()  = {a.fm()}");
+            a = new K();
+            Console.WriteLine($"a.fm()  = {a.fm()}");
+
+            Console.ReadKey();
+        }
+    }
+}
