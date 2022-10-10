@@ -48,3 +48,5 @@
 - [Лабораторная работа #0](3_semester/lab_0/report/report.pdf)
 - [Лабораторная работа #1](3_semester/lab_1/report/report.pdf)
 - [Лабораторная работа #2](3_semester/lab_2_2/report/report.pdf)
+- [Лабораторная работа #3](3_semester/lab_3/report/report.pdf)
+- [Лабораторная работа #4](3_semester/lab_4_2/report/report.pdf)
