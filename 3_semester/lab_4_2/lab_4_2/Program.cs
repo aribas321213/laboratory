@@ -45,7 +45,7 @@ namespace lab_4_2
             a.mA();
             Console.WriteLine("    Комбинирование");
             Console.WriteLine($"a.fa() = {a.fA()}");
-            Console.WriteLine($"((A)b).f() =  {((D)a).f()}");
+            Console.WriteLine($"((D)a).f() =  {((D)a).f()}");
 
             C c = new C();
             c.f();

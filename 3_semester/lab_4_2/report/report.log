@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.9.23)  10 OCT 2022 11:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.9.23)  15 OCT 2022 02:12
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1601,12 +1601,7 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count367
 \l__pdf_internal_box=\box147
 )
-(./report.aux
-LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 2
-1.
- (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
-File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-))
+(./report.aux)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -1624,6 +1619,11 @@ LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 9.
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 9
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for T2B/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
@@ -1789,19 +1789,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--64
  []
 
 [6 <./formal/lab_4_2.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  ) 
 Here is how much of TeX's memory you used:
  33515 strings out of 482657
  597010 string characters out of 5957838
- 1187786 words of memory out of 5000000
+ 1187870 words of memory out of 5000000
  47661 multiletter control sequences out of 15000+600000
  547258 words of font info for 55 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
@@ -1817,7 +1817,7 @@ ar/fonts/pk/ljfour/lh/lh-t2a/larm1000.600pk> </home/constantfear/.texlive2019/t
 exmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1095.600pk> </home/constantfear/.texlive
 2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2074.600pk> </home/constantfear/.t
 exlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk>
-Output written on report.pdf (7 pages, 136648 bytes).
+Output written on report.pdf (7 pages, 136638 bytes).
 PDF statistics:
  609 PDF objects out of 1000 (max. 8388607)
  306 compressed objects within 4 object streams

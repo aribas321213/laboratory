@@ -1,0 +1,8 @@
+D:\Projects\laboratory\3_semester\lab_5\lab_5\bin\Debug\lab_5.exe.config
+D:\Projects\laboratory\3_semester\lab_5\lab_5\bin\Debug\lab_5.exe
+D:\Projects\laboratory\3_semester\lab_5\lab_5\bin\Debug\lab_5.pdb
+D:\Projects\laboratory\3_semester\lab_5\lab_5\obj\Debug\lab_5.csproj.AssemblyReference.cache
+D:\Projects\laboratory\3_semester\lab_5\lab_5\obj\Debug\lab_5.csproj.SuggestedBindingRedirects.cache
+D:\Projects\laboratory\3_semester\lab_5\lab_5\obj\Debug\lab_5.csproj.CoreCompileInputs.cache
+D:\Projects\laboratory\3_semester\lab_5\lab_5\obj\Debug\lab_5.exe
+D:\Projects\laboratory\3_semester\lab_5\lab_5\obj\Debug\lab_5.pdb
