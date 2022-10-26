@@ -1,0 +1,53 @@
+\documentclass[12pt]{report}
+\usepackage{styles/log-style}
+\usepackage{setspace}  
+
+\title{lab_report}
+\author{Рамиль Титеев}
+\date{September 2022}
+
+\begin{document}
+    \begin{titlepage}
+        \begin{center}
+            \large{Московский Aвиационный Институт}\\
+            \large{(Национальный Исследовательский Университет)}\\
+            \vspace{0.4in}
+            \textbf{\LARGE{Факультет информационных технологий и прикладной математики}}\\
+            \vspace{0.4in}
+            \large{Кафедра вычислительной математики и программирования}\\
+            \vspace{0.4in}
+            \textbf{\LARGE{Лабораторная работa 7 по курсу ОOП:}}\\
+            \textbf{\LARGE{основы программирования на языке С\#}}\\
+        \end{center}
+        \vspace{0.6in}
+        \small{7. ИСПОЛЬЗОВАНИЕ. КЛИЕНТ-СЕРВЕР. }\\
+        \vfill
+        \begin{flushleft}
+                \large{ 
+                    Работу выполнил:\\
+                    М8О-205Б-21 \hspace{0.1in} 
+                    Титеев Р.М. \hspace{0.3in}  
+                    \tline{(\textit{подпись})}{\hspace{1in}} 
+                    \hspace{0.3in} 
+                    \tline{(\textit{вариант})}{\hspace{0.7in}}\\ 
+                    Руководитель: \tline{(\textit{подпись})}{\hspace{1in}}/Кузнецова С.В. \\
+                    Дата: \underline{\hspace{0.4in}} октября 2022\\
+                }
+        \end{flushleft}        
+    \end{titlepage}
+
+    \textbf{\large{Использование.}}\\
+    \textbf{Текст программы}\\
+    \input{formal/code_1.tex}
+    \vspace{0.4in}
+    \newpage
+    \textbf{Результат работы}\\
+    \begin{center}
+        \includegraphics[scale=0.5]{formal/lab_7.png}\\
+    \end{center}
+
+    \textbf{Вывод}\\
+    С помощью использования клиент-сервер, можно контролировать или управлять одним объектом – клиентом,  
+    через другой объект – сервер. При этом объект-клиент выступает в качестве параметра для объекта-сервера.
+
+\end{document}

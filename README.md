@@ -50,3 +50,7 @@
 - [Лабораторная работа #2](3_semester/lab_2_2/report/report.pdf)
 - [Лабораторная работа #3](3_semester/lab_3/report/report.pdf)
 - [Лабораторная работа #4](3_semester/lab_4_2/report/report.pdf)
+- [Лабораторная работа #5](3_semester/lab_5/report/report.pdf)
+- [Лабораторная работа #6](3_semester/lab_6/report/report.pdf)
+- [Лабораторная работа #7](3_semester/lab_7/report/report.pdf)
+- [Лабораторная работа #8](3_semester/lab_8/report/report.pdf)

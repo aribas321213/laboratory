@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+cp}{\PYGZsh{}ifndef LABS\PYGZus{}STUDENTS\PYGZus{}H}
+    \PYG{c+cp}{\PYGZsh{}define LABS\PYGZus{}STUDENTS\PYGZus{}H}
+    \PYG{k}{typedef} \PYG{k}{struct}\PYG{p}{\PYGZob{}}
+        \PYG{k+kt}{char} \PYG{n}{surname}\PYG{p}{[}\PYG{l+m+mi}{15}\PYG{p}{];}
+        \PYG{k+kt}{char} \PYG{n}{initsial}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{];}
+        \PYG{k+kt}{char} \PYG{n}{is\PYGZus{}entrant}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{];}
+        \PYG{k+kt}{char} \PYG{n}{is\PYGZus{}medal}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{];}
+        \PYG{k+kt}{int} \PYG{n}{math}\PYG{p}{;}
+        \PYG{k+kt}{int} \PYG{n}{inf}\PYG{p}{;}
+        \PYG{k+kt}{int} \PYG{n}{fiz}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}} \PYG{n}{student}\PYG{p}{;}
+    \PYG{c+cp}{\PYGZsh{}endif}
+\end{Verbatim}
