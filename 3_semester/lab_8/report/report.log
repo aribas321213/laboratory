@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.9.23)  26 OCT 2022 22:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.9.23)  28 OCT 2022 22:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1758,7 +1758,7 @@ File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 <to be read again> 
                    \relax 
 l.48             mainClass_1<
-                             sipleClass> a_simple = new mainClass_1<sipleCla...
+                             simpleClass> a_simple = new mainClass_1<simpleC...
 [1]) [2]
 Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
@@ -1781,7 +1781,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
  33381 strings out of 482657
- 595025 string characters out of 5957838
+ 595026 string characters out of 5957838
  1172746 words of memory out of 5000000
  47653 multiletter control sequences out of 15000+600000
  547258 words of font info for 55 fonts, out of 8000000 for 9000
@@ -1798,9 +1798,9 @@ ar/fonts/pk/ljfour/lh/lh-t2a/larm1000.600pk> </home/constantfear/.texlive2019/t
 exmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1095.600pk> </home/constantfear/.texlive
 2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2074.600pk> </home/constantfear/.t
 exlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk>
-Output written on report.pdf (4 pages, 98059 bytes).
+Output written on report.pdf (4 pages, 98361 bytes).
 PDF statistics:
- 409 PDF objects out of 1000 (max. 8388607)
+ 410 PDF objects out of 1000 (max. 8388607)
  153 compressed objects within 2 object streams
  79 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)

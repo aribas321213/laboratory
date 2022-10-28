@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace lab_8
 {
-    class sipleClass {
-        public sipleClass(){}
+    class simpleClass {
+        public simpleClass(){}
     }
     class mainClass_1 <T> {
         public mainClass_1(){}
@@ -45,15 +45,15 @@ namespace lab_8
             mainClass_1<int> a_int = new mainClass_1<int>();
             a_int.m(4*9);
 
-            mainClass_1<sipleClass> a_simple = new mainClass_1<sipleClass>();
-            a_simple.m(new sipleClass());
+            mainClass_1<simpleClass> a_simple = new mainClass_1<simpleClass>();
+            a_simple.m(new simpleClass());
 
             mainClass_2 <mainClass_1<string>, 
-                         mainClass_1<sipleClass>, 
-                         sipleClass> a_ = new mainClass_2<mainClass_1<string>, 
-                                                          mainClass_1<sipleClass>, 
-                                                          sipleClass>();
-            a_.t3 = new sipleClass();
+                         mainClass_1<simpleClass>, 
+                         simpleClass> a_ = new mainClass_2<mainClass_1<string>, 
+                                                          mainClass_1<simpleClass>, 
+                                                          simpleClass>();
+            a_.t3 = new simpleClass();
 
             a_str.val = "testStr_2";
             var v = new mainClass_1<string>();
