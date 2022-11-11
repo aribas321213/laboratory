@@ -1,0 +1,13 @@
+D:\Projects\laboratory\ИСРППС\lab_1\bin\Debug\lab_1.exe.config
+D:\Projects\laboratory\ИСРППС\lab_1\bin\Debug\lab_1.exe
+D:\Projects\laboratory\ИСРППС\lab_1\bin\Debug\lab_1.pdb
+D:\Projects\laboratory\ИСРППС\lab_1\obj\Debug\lab_1.csproj.AssemblyReference.cache
+D:\Projects\laboratory\ИСРППС\lab_1\obj\Debug\lab_1.csproj.SuggestedBindingRedirects.cache
+D:\Projects\laboratory\ИСРППС\lab_1\obj\Debug\lab_1.Properties.Resources.resources
+D:\Projects\laboratory\ИСРППС\lab_1\obj\Debug\lab_1.csproj.GenerateResource.cache
+D:\Projects\laboratory\ИСРППС\lab_1\obj\Debug\lab_1.csproj.CoreCompileInputs.cache
+D:\Projects\laboratory\ИСРППС\lab_1\obj\Debug\lab_1.exe
+D:\Projects\laboratory\ИСРППС\lab_1\obj\Debug\lab_1.pdb
+D:\Projects\laboratory\ИСРППС\lab_1\obj\Debug\lab_1.MainWindow.resources
+D:\Projects\laboratory\ИСРППС\lab_1\obj\Debug\lab_1.Instruction.resources
+D:\Projects\laboratory\ИСРППС\lab_1\obj\Debug\lab_1.Result.resources
