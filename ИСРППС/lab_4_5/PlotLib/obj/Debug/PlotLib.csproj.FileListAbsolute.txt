@@ -1,0 +1,6 @@
+D:\Projects\laboratory\ИСРППС\lab_4_5\PlotLib\obj\Debug\PlotLib.csproj.AssemblyReference.cache
+D:\Projects\laboratory\ИСРППС\lab_4_5\PlotLib\obj\Debug\PlotLib.csproj.CoreCompileInputs.cache
+D:\Projects\laboratory\ИСРППС\lab_4_5\PlotLib\bin\Debug\PlotLib.dll
+D:\Projects\laboratory\ИСРППС\lab_4_5\PlotLib\bin\Debug\PlotLib.pdb
+D:\Projects\laboratory\ИСРППС\lab_4_5\PlotLib\obj\Debug\PlotLib.dll
+D:\Projects\laboratory\ИСРППС\lab_4_5\PlotLib\obj\Debug\PlotLib.pdb

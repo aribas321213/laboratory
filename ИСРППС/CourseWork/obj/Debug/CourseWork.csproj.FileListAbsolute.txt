@@ -1,0 +1,11 @@
+D:\Projects\laboratory\ИСРППС\CourseWork\bin\Debug\CourseWork.exe.config
+D:\Projects\laboratory\ИСРППС\CourseWork\bin\Debug\CourseWork.exe
+D:\Projects\laboratory\ИСРППС\CourseWork\bin\Debug\CourseWork.pdb
+D:\Projects\laboratory\ИСРППС\CourseWork\obj\Debug\CourseWork.csproj.AssemblyReference.cache
+D:\Projects\laboratory\ИСРППС\CourseWork\obj\Debug\CourseWork.csproj.SuggestedBindingRedirects.cache
+D:\Projects\laboratory\ИСРППС\CourseWork\obj\Debug\CourseWork.Form1.resources
+D:\Projects\laboratory\ИСРППС\CourseWork\obj\Debug\CourseWork.Properties.Resources.resources
+D:\Projects\laboratory\ИСРППС\CourseWork\obj\Debug\CourseWork.csproj.GenerateResource.cache
+D:\Projects\laboratory\ИСРППС\CourseWork\obj\Debug\CourseWork.csproj.CoreCompileInputs.cache
+D:\Projects\laboratory\ИСРППС\CourseWork\obj\Debug\CourseWork.exe
+D:\Projects\laboratory\ИСРППС\CourseWork\obj\Debug\CourseWork.pdb
