@@ -2,7 +2,7 @@
 
 Лабораторные и курсовые работы по информатике
 
-Титеев Рамиль М8О-105Б-21
+Титеев Рамиль М8О-205Б-21
 
 
 [![Телеграмм](https://img.shields.io/badge/My-Telegram-informational)](https://t.me/feelconstantfear)
