@@ -36,6 +36,8 @@ namespace PlotLib
 
     public class ConcreteFactory1 : AbstractFactory
     {
+        private static readonly ConcreteFactory1 instance = new ConcreteFactory1();
+        public static ConcreteFactory1 Instance { get { return instance; } }
         public override MainFunction DefineFunction()
         {
             return new FunctionSin();
@@ -60,6 +62,8 @@ namespace PlotLib
 
     public class ConcreteFactory2 : AbstractFactory
     {
+        private static readonly ConcreteFactory2 instance = new ConcreteFactory2();
+        public static ConcreteFactory2 Instance { get { return instance; } }
         public override MainFunction DefineFunction()
         {
             return new FunctionCos();

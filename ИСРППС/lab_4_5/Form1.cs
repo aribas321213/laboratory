@@ -10,15 +10,11 @@ namespace lab_4_5
     public partial class Form1 : Form
     {
         List<Plot> plots;
-        AbstractFactory factory1;
-        AbstractFactory factory2;
         Label lb;
         public Form1()
         {
             InitializeComponent();
             plots = new List<Plot>();
-            factory1 = new ConcreteFactory1();
-            factory2 = new ConcreteFactory2();
             lb = label1;
             this.panel2.Controls.Clear();
             this.panel2.Controls.Add(lb);
@@ -38,7 +34,7 @@ namespace lab_4_5
             }
             Console.WriteLine(plots.Count);
 
-            Plot pl = new Plot(factory1, p);
+            Plot pl = new Plot(ConcreteFactory1.Instance, p);
             plots.Add(pl);
             this.panel2.Controls.Add(pl.plot);
         }
@@ -57,7 +53,7 @@ namespace lab_4_5
             }
             Console.WriteLine(plots.Count);
 
-            Plot pl = new Plot(factory2, p);
+            Plot pl = new Plot(ConcreteFactory2.Instance, p);
             plots.Add(pl);
             this.panel2.Controls.Add(pl.plot);
         }
