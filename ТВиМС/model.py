@@ -183,7 +183,7 @@ class Model:
         hist_for_print, _ = np.histogram(residuals, bins=num_bins, density=False)
         # Вычисление ширины интервала
         bin_width = bin_edges[1] - bin_edges[0]
-        expected_freq = np.diff([0]+ list(norm.cdf(bin_edges, loc=0, scale=(np.sum(residuals**2) / (model_2.n))))+[1])
+        expected_freq = np.diff([0]+ list(norm.cdf(bin_edges, loc=0, scale=(np.sum(residuals**2) / (self.n))))+[1])
         estimated_freq = [0] + list(hist*bin_width) + [0]
 
         chi2_statistic = len(self.x_k)*np.sum((estimated_freq - expected_freq) ** 2 / expected_freq)
